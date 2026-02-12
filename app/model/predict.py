@@ -40,7 +40,7 @@ def predict_image(img_path):
     class_index = int(np.argmax(pred))
     confidence = float(np.max(pred))
 
-    if confidence < 0.80:
+    if confidence < 0.50:
         return "unknown_image", confidence
 
     return classes[class_index], confidence
